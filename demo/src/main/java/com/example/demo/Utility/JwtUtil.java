@@ -1,16 +1,18 @@
 package com.example.demo.Utility;
 
-import io.jsonwebtoken.*;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.stereotype.Component;
-
 import java.security.Key;
 import java.util.Date;
+
+import org.springframework.stereotype.Component;
 
 @Component
 public class JwtUtil {
 
-    // Secret key for signing (HS256)
+    // Generate a secure random key for HS256
     private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     // Generate token
@@ -19,7 +21,7 @@ public class JwtUtil {
                 .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1 hour
-                .signWith(key)
+                .signWith(key)  // <-- secure key
                 .compact();
     }
 
