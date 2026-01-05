@@ -1,6 +1,7 @@
 package com.example.demo.Service;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -32,5 +33,11 @@ public class UserService implements UserServiceinterface {
 	public Users createUser(Users users) {
 		// TODO Auto-generated method stub
 		return userRepo.save(users);
+	}
+
+
+	public List<Users> getAllUsers() {
+		// TODO Auto-generated method stub
+		return userRepo.findAll();
 	}}
 
