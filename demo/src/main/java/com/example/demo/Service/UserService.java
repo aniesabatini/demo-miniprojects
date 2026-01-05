@@ -1,5 +1,6 @@
 package com.example.demo.Service;
 
+<<<<<<< HEAD
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -32,4 +33,8 @@ public class UserService implements UserServiceinterface {
 		// TODO Auto-generated method stub
 		return userRepo.save(users);
 	}
+=======
+public class UserService {
+
+>>>>>>> branch 'master' of https://github.com/aniesabatini/demo-miniprojects.git
 }
