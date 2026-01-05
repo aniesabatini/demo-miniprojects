@@ -50,5 +50,4 @@ public class JwtFilter extends OncePerRequestFilter {
 
         // Continue the filter chain regardless of JWT validity
         filterChain.doFilter(request, response);
-    }
-}
+    }}
