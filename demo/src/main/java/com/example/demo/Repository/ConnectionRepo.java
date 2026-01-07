@@ -1,18 +1,12 @@
 package com.example.demo.Repository;
 
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.http.ResponseEntity;
+import org.springframework.data.jpa.repository.aot.JpaRepositoryContributor;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.Connection;
-import com.example.demo.entity.Users;
 
 @Repository
-public interface UserRepo extends JpaRepository<Users, Integer> {
-
-
-	
+public interface ConnectionRepo extends JpaRepository<Connection , Integer> {
 
 }
