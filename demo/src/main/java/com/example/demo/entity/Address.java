@@ -4,21 +4,21 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Address {
-int houseno;
+Integer houseno;
 String streetname;
 String city;
 public Address() {}
 
-public Address(int houseno, String streetname, String city) {
+public Address(Integer houseno, String streetname, String city) {
 	super();
 	this.houseno = houseno;
 	this.streetname = streetname;
 	this.city = city;
 }
-public int getHouseno() {
+public Integer getHouseno() {
 	return houseno;
 }
-public void setHouseno(int houseno) {
+public void setHouseno(Integer houseno) {
 	this.houseno = houseno;
 }
 public String getStreetname() {
