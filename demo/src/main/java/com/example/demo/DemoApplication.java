@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EntityScan(basePackages = "com.example.demo.Entity")
 
 
+
 public class DemoApplication {
 
 	public static void main(String[] args) {
